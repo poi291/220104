@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded",function(e){
 	//console.log( url.hash );
 	url=url.hash.substr(1);
 	//console.log( url );
-	url=decodeURIComponent(url);
+	url=decodeURIComponent(url); //decodeURI()
+
 	
     if(url.search('format') > 0){
       console.log( 'AAA' );
