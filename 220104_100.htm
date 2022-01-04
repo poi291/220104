@@ -22,7 +22,6 @@ window.gg=[]; //globalVar
 
 document.addEventListener("DOMContentLoaded",function(e){
 
-
 	//取得hash的網址字串
 	var url='';
 	url=window.location;
@@ -30,7 +29,7 @@ document.addEventListener("DOMContentLoaded",function(e){
 	url=url.hash.substr(1);
 	//console.log( url );
 	//url=decodeURIComponent(url);//decodeURI()
-	
+	$('#poi220104').html('');
 	$('#poi220104').append(''+url);
 
 
