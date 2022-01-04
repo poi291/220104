@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -35,11 +35,13 @@ document.addEventListener("DOMContentLoaded",function(e){
 	
     if(url.search('format') > 0){
       console.log( 'AAA' );
+	  //https://pbs.twimg.com/media/ETCnWdLUwAAzJWF?format=jpg&name=orig
       var url = new URL( url );
       var urlhash_format =url.searchParams.get('format');
       var urlhash_name   =url.searchParams.get('name');
     }else{
       console.log( 'BBB' );
+  	  //https://pbs.twimg.com/media/ETCnWdLUwAAzJWF.jpg:orig
       var url = new URL( url );
       str=url.href;
       var FFF='';
