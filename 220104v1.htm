@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded",function(e){
 	//console.log( url.hash );
 	url=url.hash.substr(1);
 	//console.log( url );
-	url=decodeURIComponent(url); //decodeURI()
-
+	url=decodeURIComponent(url);//decodeURI()
 	
     if(url.search('format') > 0){
       console.log( 'AAA' );
@@ -64,9 +63,19 @@ document.addEventListener("DOMContentLoaded",function(e){
       var urlhash_name   =url.searchParams.get('name');
     }
 
+    console.log( url );
+    var FFF='';
+    FFF=FFF+url.origin;
+    FFF=FFF+url.pathname;
+    FFF=FFF+'.';
+    FFF=FFF+url.searchParams.get('format');
+    console.log( FFF );
+    var url_str='';
+    url_str=FFF;    //https://pbs.twimg.com/media/D2dEk64UgAA8hbB.jpg
+	
 	//url.searchParams.set('name','orig');
-	url.searchParams.set('name','large');
-	console.log( url );//https://pbs.twimg.com/media/ETCnWdLUwAAzJWF?format=jpg&name=orig
+	//url.searchParams.set('name','large');
+	//console.log( url );//https://pbs.twimg.com/media/ETCnWdLUwAAzJWF?format=jpg&name=orig
 	
 	var nn=url.pathname.split("\/")[2];
     //console.log( nn );//ETCnWdLUwAAzJWF
@@ -76,10 +85,13 @@ document.addEventListener("DOMContentLoaded",function(e){
 	//window.gg.url=url;
 	
 	
-	url=url.href;//https://pbs.twimg.com/media/ETCnWdLUwAAzJWF?format=jpg&name=orig
+	//url=url.href;//https://pbs.twimg.com/media/ETCnWdLUwAAzJWF?format=jpg&name=orig
+	url=url_str+":orig";
     //console.log( url );
 	//url='http://demo.cloudimg.io/cdno/n/q90.tjpg/'+url;//品質90的jpg
 	//url='https://images.weserv.nl/?url='+url+'&output=jpg&q=90';//品質90的jpg
+	
+	url='https://images.weserv.nl/?url='+url+'&output=jpg&q=85&filename='+nn+'&w=2048&h=2048&fit=inside&we';
 	//
 	window.gg.url=url;
 	//return;
